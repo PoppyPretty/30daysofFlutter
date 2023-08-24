@@ -68,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                         changeButton = true;
                       });
                       await Future.delayed(const Duration(seconds: 1));
+                      // WARNING: Don't use BuildContexts across async gaps
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
                     }),
                     child: AnimatedContainer(
