@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:poppy_catalog/screens/home_page.dart';
 import 'package:poppy_catalog/screens/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:poppy_catalog/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,17 +16,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
-        ),
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
       initialRoute: "/",
       routes: {
         "/": ((context) => const LoginPage()),
-        "/login": ((context) => const LoginPage()),
-        "/home": ((context) => const HomePage()),
+        MyRoutes.loginRoute: ((context) => const LoginPage()),
+        MyRoutes.homeRoute: ((context) => const HomePage()),
       },
     );
   }
