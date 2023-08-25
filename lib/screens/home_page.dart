@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poppy_catalog/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
         child:
             Text("Hello World! \n\n Welcome to $days days of Flutter by $name"),
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
     );
   }
 }
