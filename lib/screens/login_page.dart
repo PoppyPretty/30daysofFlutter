@@ -41,16 +41,16 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: [
               const SizedBox(
-                height: 50.0,
+                height: 20.0,
               ),
               Image.asset(
                 "assets/images/mobile_login_2.png",
-                height: 200.0,
-                width: 200.0,
+                height: 145.0,
+                width: 145.0,
                 fit: BoxFit.fill, //.cover,
               ),
               const SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Text(
                 "Welcome $name",
@@ -60,12 +60,9 @@ class _LoginPageState extends State<LoginPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
-                height: 20.0,
-              ),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 16.0, horizontal: 32.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 3.0, horizontal: 32.0),
                 child: Column(
                   children: [
                     TextFormField(
@@ -102,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     const SizedBox(
-                      height: 45.0,
+                      height: 30.0,
                     ),
                     Material(
                       color: Colors.deepPurple,
