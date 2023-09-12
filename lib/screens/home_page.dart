@@ -41,11 +41,19 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemBuilder: ((context, index) {
+                  final item = CatalogModel.items[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(child: Image.network(item.image)),
+                  );
+                }),
                 itemCount: CatalogModel.items.length,
-                itemBuilder: (context, index) => ItemWidget(
-                  item: CatalogModel.items[index],
-                ),
               )
             : const Center(
                 child: CircularProgressIndicator(),
